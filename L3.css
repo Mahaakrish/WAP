@@ -1,0 +1,24 @@
+heading{
+    color: orange;
+    background-color: silver;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bolder;
+    display: block;
+}
+Name{
+    color: green;
+    font-family: Verdana;
+    font-size: 18px;
+    font-weight: bold;
+}
+USN{
+    font-size: 14px;
+}
+Name,USN{
+    display: block;
+    background-color: aqua;
+}
+Student{
+    border-bottom: 1px solid black;
+}

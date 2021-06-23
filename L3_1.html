@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Convert JSON Data to HTML Table</title>
+        <script>
+        function CreateTableFromJSON(){
+            var students = [{
+                        "stud_ID": "20MCA48",
+                        "stud_Name": "Mk",
+                        "Major": "CS",
+                        "mobile": "9900990099"
+                        },
+                        {
+                        "stud_ID": "20MCA57",
+                        "stud_Name": "Ash",
+                        "Major": "CS",
+                        "mobile": "9900990099"
+                        },
+                        {   
+                        "stud_ID": "20MCA55",
+                        "stud_Name": "Jd",
+                        "Major": "CS",
+                        "mobile": "9900990099"
+                        }]
+            var tableBody = '<table border="1"><tr><td>Student-id</td><td >Student Name</td><td >Major</td><td>Mobile</td></tr>'
+            students.forEach(function(d){
+            tableBody += '<tr><td>'+d.stud_ID+'</td><td>'+d.stud_Name+'</td><td>'+d.Major+'</td><td>'+d.mobile+'</td></tr>';
+            });
+            tableBody += '</table>';
+            var divContainer = document.getElementById("showData");
+            divContainer.innerHTML = tableBody;
+        }
+        </script>
+    </head>
+    <body>
+        <input type="button" onclick="CreateTableFromJSON()" value="Create Table From JSON" />
+        <p id="showData"></p>
+    </body>
+</html>
